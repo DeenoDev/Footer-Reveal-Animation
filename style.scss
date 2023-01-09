@@ -1,0 +1,48 @@
+$brand-primary: #92B8C3;
+$brand-secondary: #FF30AA;
+$brand-dark: #fff;
+$brand-light: #fff;
+$brand-grey: #344;
+* {
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+}
+footer {
+  height: 300px;
+  background-color: $brand-primary;
+  position: relative;
+  .footer__inner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 40px 60px;
+    width: 100%;
+    * {
+      color: $brand-light;
+    }
+  }
+  .logo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 80px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform, opacity;
+    transition-duration: .8s;
+    transition-timing-function: ease;  
+    
+    &.show{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
